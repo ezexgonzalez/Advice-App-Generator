@@ -1,0 +1,184 @@
+/* STYLE CARD */
+
+.card {
+  background-color: #292929;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  flex-direction: column;
+  padding: 20px 0px 20px 0px;
+  width: 90%;
+  min-height: 280px;
+  border-radius: 10px;
+  position: relative;
+}
+
+.id {
+  color: #F15025;
+  font-weight: 600;
+  font-size: 13px;
+  letter-spacing: 3px;
+  animation: fadeIn 0.6s ease forwards;
+  margin: auto;
+}
+
+.top{
+  display: flex;
+  width: 100%;
+}
+
+.advice {
+  padding: 0px 25px 0px 25px;
+  font-size: 23px;
+  font-weight: 600;
+  min-height: 130px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  animation: fadeIn 0.6s ease forwards;
+}
+
+.buttonHistory{
+  border: none;
+  color: white;
+  position: absolute;
+  left: 90%;
+  transition: 200ms;
+  width: 18px;
+  height: 18px;
+}
+
+.patternDivider {
+  width: 90%;
+  height: 15px;
+  margin-bottom: 25px;
+}
+
+.randomButton {
+  background-color: #F15025;
+  width: 60px;
+  height: 60px;
+  border: none;
+  padding: 15px;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  bottom: -30px;
+  cursor: pointer;
+  position: absolute;
+}
+
+.spin {
+  animation: spin 0.4s linear;
+}
+
+/* ANIMATION */
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes spin {
+  from {
+    transform: rotate(0deg);
+  }
+
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+@keyframes pulse {
+  0% {
+    transform: scale(1);
+  }
+
+  50% {
+    transform: scale(1.15);
+  }
+
+  100% {
+    transform: scale(1);
+  }
+}
+
+.randomButton:hover {
+  box-shadow: 0 0 20px 5px rgba(241, 80, 37, 0.7);
+  /* efecto glow */
+  animation: pulse 0.8s ease;
+}
+
+.buttonHistory:hover{
+  color: #F15025;
+  cursor: pointer;
+}
+
+
+
+/* LOADER */
+
+.loader {
+  width: 48px;
+  height: 48px;
+  border-radius: 50%;
+  position: relative;
+  animation: rotate 1s linear infinite
+}
+
+.loader::before,
+.loader::after {
+  content: "";
+  box-sizing: border-box;
+  position: absolute;
+  inset: 0px;
+  border-radius: 50%;
+  border: 5px solid #FFF;
+  animation: prixClipFix 2s linear infinite;
+}
+
+.loader::after {
+  transform: rotate3d(90, 90, 0, 180deg);
+  border-color: #F15025;
+}
+
+@keyframes rotate {
+  0% {
+    transform: rotate(0deg)
+  }
+
+  100% {
+    transform: rotate(360deg)
+  }
+}
+
+@keyframes prixClipFix {
+  0% {
+    clip-path: polygon(50% 50%, 0 0, 0 0, 0 0, 0 0, 0 0)
+  }
+
+  50% {
+    clip-path: polygon(50% 50%, 0 0, 100% 0, 100% 0, 100% 0, 100% 0)
+  }
+
+  75%,
+  100% {
+    clip-path: polygon(50% 50%, 0 0, 100% 0, 100% 100%, 100% 100%, 100% 100%)
+  }
+}
+
+/* RESPONSIVE MEDIA */
+
+@media (min-width: 768px) {
+  .card {
+    max-width: 500px;
+    min-height: 250px;
+  }
+
+}
