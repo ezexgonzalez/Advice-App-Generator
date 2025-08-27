@@ -34,15 +34,6 @@ Para mí representa un **nuevo inicio** 💪, un espacio para recordar, mejorar 
 
 ---
 
-## 💡 Reflexión personal
-> “No es solo una app de consejos… es mi forma de volver a programar,  
-de recuperar constancia y enfocarme en crecer como desarrollador.”  
-
-Este es apenas el comienzo 🚀.  
-Mi objetivo es seguir sumando proyectos, funcionalidades y nuevas tecnologías al camino.  
-
----
-
 ## 📌 Próximos pasos
 - 🔍 Mejorar la accesibilidad (a11y).
 - 🌙 Dark/Light theme switch.
